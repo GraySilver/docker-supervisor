@@ -89,7 +89,7 @@ class POutputDispatcher(PDispatcher):
             backups = getattr(process.config, '%s_logfile_backups' % channel)
             # alter by yzx
             project_name = getattr(process.config,"name")
-            fmt = '[program:{}] - %(message)s'.format(project_name)
+            fmt = '[{} - %(asctime)s] - %(message)s'.format(project_name)
             if logfile == 'syslog':
                 fmt = ' '.join((process.config.name, fmt))
             self.mainlog = process.config.options.getLogger(
