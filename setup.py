@@ -57,7 +57,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 2.7",
 ]
 
-version_txt = os.path.join(here, 'supervisor/version.txt')
+version_txt = os.path.join(here, 'docker_supervisor/version.txt')
 supervisor_version = open(version_txt).read().strip()
 
 dist = setup(
@@ -78,14 +78,14 @@ dist = setup(
     tests_require=['mock >= 0.5.0'],
     include_package_data=True,
     zip_safe=False,
-    namespace_packages=['supervisor'],
-    test_suite="supervisor.tests",
+    namespace_packages=['docker_supervisor'],
+    test_suite="docker_supervisor.tests",
     entry_points={
         'console_scripts': [
-         'docker-supervisord = supervisor.supervisord:main',
-         'docker-supervisorctl = supervisor.supervisorctl:main',
-         'docker-echo_supervisord_conf = supervisor.confecho:main',
-         'docker-pidproxy = supervisor.pidproxy:main',
+         'docker-supervisord = docker_supervisor.supervisord:main',
+         'docker-supervisorctl = docker_supervisor.supervisorctl:main',
+         'docker-echo_supervisord_conf = docker_supervisor.confecho:main',
+         'docker-pidproxy = docker_supervisor.pidproxy:main',
         ],
     },
 )

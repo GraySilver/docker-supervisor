@@ -5,11 +5,11 @@ include LICENSES.txt
 include README.rst
 include TODO.txt
 include tox.ini
-include supervisor/version.txt
-include supervisor/scripts/*.py
-include supervisor/skel/*.conf
-recursive-include supervisor/tests/fixtures *.conf *.py
-recursive-include supervisor/ui *.html *.css *.png *.gif
+include docker_supervisor/version.txt
+include docker_supervisor/scripts/*.py
+include docker_supervisor/skel/*.conf
+recursive-include docker_supervisor/tests/fixtures *.conf *.py
+recursive-include docker_supervisor/ui *.html *.css *.png *.gif
 include docs/Makefile
 recursive-include docs *.py *.rst *.css *.gif *.png
 recursive-exclude docs/.build *
